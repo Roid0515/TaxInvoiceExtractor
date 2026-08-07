@@ -1,4 +1,4 @@
-using TaxInvoiceExtractor.Utils;
+﻿using TaxInvoiceExtractor.Utils;
 
 namespace TaxInvoiceExtractor.Tests;
 
@@ -15,6 +15,7 @@ public sealed class DataNormalizerTests
     [InlineData("2026-08-07", "08월 07일")]
     [InlineData("작성일자 2025.12.31", "12월 31일")]
     [InlineData("26년 1월 9일", "01월 09일")]
+    [InlineData("2026 7 25", "07월 25일")]
     public void ParseIssueMonthDay_FormatsExpected(string source, string expected) =>
         Assert.Equal(expected, DataNormalizer.ParseIssueMonthDay(source));
 
@@ -24,3 +25,5 @@ public sealed class DataNormalizerTests
     public void ParseIssueMonthDay_RejectsInvalid(string source) =>
         Assert.Null(DataNormalizer.ParseIssueMonthDay(source));
 }
+
+
