@@ -1,0 +1,10 @@
+tests/TaxInvoiceExtractor.Tests/bin/** filter=lfs diff=lfs merge=lfs -text
+tests/TaxInvoiceExtractor.Tests/obj/** filter=lfs diff=lfs merge=lfs -text
+tools/ParserInspector/obj/** filter=lfs diff=lfs merge=lfs -text
+tools/PdfLayoutInspector/bin/** filter=lfs diff=lfs merge=lfs -text
+tools/PdfLayoutInspector/obj/** filter=lfs diff=lfs merge=lfs -text
+src/TaxInvoiceExtractor/obj/** filter=lfs diff=lfs merge=lfs -text
+tools/ParserInspector/bin/** filter=lfs diff=lfs merge=lfs -text
+.packages/** filter=lfs diff=lfs merge=lfs -text
+release/** filter=lfs diff=lfs merge=lfs -text
+src/TaxInvoiceExtractor/bin/** filter=lfs diff=lfs merge=lfs -text
