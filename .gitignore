@@ -1,0 +1,10 @@
+bin/
+obj/
+release/
+logs/
+*.user
+*.suo
+TestResults/
+
+.packages/
+.dotnet-home/
