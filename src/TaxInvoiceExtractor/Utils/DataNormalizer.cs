@@ -1,4 +1,4 @@
-using System.Globalization;
+﻿using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace TaxInvoiceExtractor.Utils;
@@ -8,7 +8,7 @@ public static partial class DataNormalizer
     [GeneratedRegex(@"[^0-9-]")]
     private static partial Regex NonNumericRegex();
 
-    [GeneratedRegex(@"(?<year>20\d{2}|\d{2})\s*[년.\-/]\s*(?<month>\d{1,2})\s*[월.\-/]\s*(?<day>\d{1,2})\s*일?")]
+    [GeneratedRegex(@"(?<year>20\d{2}|\d{2})(?:\s*년\s*|\s*[.\-/]\s*|\s+)(?<month>\d{1,2})(?:\s*월\s*|\s*[.\-/]\s*|\s+)(?<day>\d{1,2})\s*일?")]
     private static partial Regex DateRegex();
 
     public static long? ParseAmount(string? value)
@@ -36,3 +36,4 @@ public static partial class DataNormalizer
     public static string CleanText(string? value) =>
         Regex.Replace(value ?? string.Empty, @"\s+", " ").Trim(' ', ':', '：');
 }
+
